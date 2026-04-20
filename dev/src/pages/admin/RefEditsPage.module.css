@@ -1,0 +1,160 @@
+.wrap { display: flex; flex-direction: column; gap: 16px; }
+
+.intro {
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+}
+
+.filterBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.filterBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 5px 14px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+.filterBtn[data-active="true"] {
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+
+.empty {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  color: var(--text-dim);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Proposal card ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card[data-op="create"] { border-left-color: var(--green); }
+.card[data-op="update"] { border-left-color: var(--blue); }
+.card[data-op="delete"] { border-left-color: var(--red); }
+.card[data-status="approved"] { opacity: 0.7; }
+.card[data-status="rejected"] { opacity: 0.5; }
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.opBadge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+.opBadge[data-op="create"] { background: var(--green); color: var(--on-accent); }
+.opBadge[data-op="update"] { background: var(--blue);  color: var(--on-accent); }
+.opBadge[data-op="delete"] { background: var(--red);   color: var(--on-accent); }
+
+.tableBadge {
+  font-size: 13px;
+  color: var(--text-dim);
+  padding: 2px 8px;
+  background: var(--surface-2);
+  border-radius: 3px;
+}
+
+.statusBadge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--border);
+}
+.statusBadge[data-status="approved"] { color: var(--green); border-color: var(--green); }
+.statusBadge[data-status="rejected"] { color: var(--red); border-color: var(--red); }
+
+.meta { font-size: 12px; color: var(--text-mut); }
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  color: var(--text);
+  margin: 0;
+}
+
+.reason {
+  font-size: 14px;
+  color: var(--text-dim);
+  padding: 8px 12px;
+  background: var(--bg);
+  border-radius: 4px;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+
+/* Modal helpers */
+.field { display: flex; flex-direction: column; gap: 6px; }
+.fieldLabel {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.jsonBlock {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 4px;
+  overflow: auto;
+  max-height: 60vh;
+  color: var(--text);
+}

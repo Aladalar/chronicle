@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+ 
+# Build output
+dev/dist/
+app/dist/
+ 
+# Environment (contains secrets)
+lab/.env
+api/.env
+ 
+# PM2
+*.pid
+ 
+# OS
+.DS_Store
+Thumbs.db
+ 
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+ 
+# Logs
+*.log
+npm-debug.log*
