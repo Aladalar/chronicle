@@ -1,15 +1,15 @@
 import { Entity, Column } from "typeorm";
 import { BaseEntity } from "./Base";
 
-/**
- * Shared sound columns — used by effects, music, and ambient.
- */
 abstract class SoundBase extends BaseEntity {
   @Column({ type: "varchar", length: 200 })
   name!: string;
 
   @Column({ type: "varchar", length: 500, nullable: true })
   path!: string | null;
+
+  @Column({ type: "simple-json", nullable: true })
+  variants!: string[] | null;
 
   @Column({ type: "simple-json", nullable: true })
   tags!: string[] | null;

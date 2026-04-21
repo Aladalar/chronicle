@@ -1,0 +1,136 @@
+/* dev/src/pages/admin/sounds/SoundPlayer.module.css */
+
+.bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: var(--surface);
+  border-top: 1px solid var(--border-strong);
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 160px;
+  flex-shrink: 0;
+}
+.name {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.variant {
+  font-size: 11px;
+  color: var(--text-mut);
+  font-family: var(--font-mono, monospace);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.error {
+  font-size: 11px;
+  color: var(--red);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-dim);
+  transition: all 0.12s;
+}
+.btn:hover { background: var(--border); color: var(--text); }
+.btnMain {
+  width: 34px;
+  height: 34px;
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btnMain:hover { background: var(--accent); color: var(--on-accent, #000); }
+
+.progress {
+  flex: 1;
+  height: 6px;
+  background: var(--surface-2);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-width: 60px;
+}
+.progressFill {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+.time {
+  font-size: 12px;
+  font-family: var(--font-mono, monospace);
+  color: var(--text-mut);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.volumeWrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  color: var(--text-mut);
+}
+.volumeSlider {
+  width: 72px;
+  height: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  accent-color: var(--accent);
+}
+.volumeVal {
+  font-size: 11px;
+  font-family: var(--font-mono, monospace);
+  color: var(--text-mut);
+  min-width: 30px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--text-mut);
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 2px 4px;
+  flex-shrink: 0;
+}
+.closeBtn:hover { color: var(--red); }
